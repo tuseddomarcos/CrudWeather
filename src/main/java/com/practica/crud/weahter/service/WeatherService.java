@@ -1,7 +1,6 @@
 package com.practica.crud.weahter.service;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,15 +28,11 @@ public class WeatherService {
 		return weathers;
 	}
 
-	public Weather getWeatherById(int id)   
-	{  
-		
-		Date dare = new Date();
+	public Weather getWeatherById(int id){  
 		return weatherRepository.findById(id).get();  
 	} 
 	
-	public void delete(int id)   
-	{  
-	weatherRepository.deleteById(id);  
+	public void delete(int id){  
+		weatherRepository.deleteById(id);  
 	}
 }

@@ -33,7 +33,7 @@ public class WatherController {
 	        }
 	    }
 	 
-	 @GetMapping(value="/weather")
+	 @GetMapping(value="/Allweather")
 	 private ResponseEntity<?> finAllWeather(){
 		 try{
 			 return new ResponseEntity<>( services.getAllWeather(), HttpStatus.OK);
@@ -45,7 +45,7 @@ public class WatherController {
 		 
 	 }
 	 @GetMapping(value="/weather")
-	 private ResponseEntity<Object> finWeatherById(@RequestHeader("id") int id){ 
+	 private ResponseEntity<Object> finWeatherById(@RequestHeader("id") int id){
 		 try{
 			 return new ResponseEntity<>(services.getWeatherById(id), HttpStatus.OK);
 	        }catch(ServiceException ex){
