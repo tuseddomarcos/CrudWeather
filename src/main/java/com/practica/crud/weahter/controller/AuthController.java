@@ -33,9 +33,11 @@ import com.practica.crud.weahter.service.UserServices;
 @RequestMapping("/auth")
 @CrossOrigin
 public class AuthController {
-
+	
+	@Autowired
 	PasswordEncoder passwordEncoder;
 	
+	@Autowired
 	AuthenticationManager authManager;
 	
 	@Autowired

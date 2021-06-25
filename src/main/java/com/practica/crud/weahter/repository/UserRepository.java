@@ -12,9 +12,9 @@ public interface UserRepository extends CrudRepository<User, Integer> {
 	
 	Optional <User> findByUserName(String nombreUsuario);
 	
-    @Query(" SELECT COUNT(*) FROM User  WHERE userName = :name")
+    @Query("SELECT COUNT(*) FROM User us WHERE us.userName = :name")
 	int existsByuserName(@Param("name") String userName);
     
-    @Query(" SELECT COUNT(*) FROM User WHERE email = :email")
+    @Query("SELECT COUNT(*) FROM User us WHERE us.email = :email")
 	int existsByEmail( @Param("email") String email);
 }

@@ -16,7 +16,7 @@ import javax.persistence.Table;
 import com.sun.istack.NotNull;
 
 @Entity
-@Table (name = "User")
+@Table (name = "USERS")
 public class User {
 	
 	@Id
@@ -70,12 +70,12 @@ public class User {
 		this.name = name;
 	}
 
-	public String getName_user() {
+	public String getUserName() {
 		return userName;
 	}
 
-	public void setName_user(String name_user) {
-		this.userName = name_user;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getEmail() {
