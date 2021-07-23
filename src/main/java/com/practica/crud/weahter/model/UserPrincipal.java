@@ -9,7 +9,9 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 public class UserPrincipal implements UserDetails {
-	
+
+	private static final long serialVersionUID = -2413294131306424690L;
+
 	private String name;
 	
 	private String name_user;
